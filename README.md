@@ -1,5 +1,6 @@
 # To-Do List 
 
+![ToDoList](./public/ToDoList.png)
 
 ## Demo 
 https://annaczerwonka.github.io/todo-list-react/
