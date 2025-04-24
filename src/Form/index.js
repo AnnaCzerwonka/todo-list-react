@@ -6,13 +6,21 @@ const Form = ({ addNewTask }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        addNewTask(newTaskContent.trim());
+
+        const trimmedNewTaskContent = newTaskContent.trim();
+
+        if (!trimmedNewTaskContent) {
+            return;
+        }
+
+        addNewTask(trimmedNewTaskContent);
         setNewTaskContent("");
     };
 
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <input
+                name="taskContent"
                 value={newTaskContent}
                 className="form__input"
                 placeholder="Co jest do zrobienia?"
