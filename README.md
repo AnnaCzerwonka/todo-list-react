@@ -6,7 +6,6 @@
 https://annaczerwonka.github.io/todo-list-react/
 
 ## General Info
-
 The todo-list application consists of two main elements:
 1. A form with a field for entering tasks and a "Add Task" button.
 2. A task list with the following options:
@@ -19,6 +18,8 @@ The todo-list application consists of two main elements:
 these buttons follow these rules:
     - if the task list is empty, the buttons are not displayed
     - if all tasks are completed, the second button becomes disabled. 
+
+## ![Preview](public/animation.gif)  
 
 ## Technoligies
 
