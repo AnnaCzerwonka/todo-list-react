@@ -21,7 +21,7 @@ these buttons follow these rules:
 
 ## ![Preview](public/animation.gif)  
 
-## Technoligies
+## Technologies
 
 - HTML
 - CSS
