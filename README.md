@@ -1,6 +1,6 @@
 # To-Do List 
 
-![ToDoList](./public/ToDoList.png)
+![ToDoList](./public/todolist.jpg)
 
 ## Demo 
 https://annaczerwonka.github.io/todo-list-react/
@@ -22,7 +22,7 @@ Important changes after removing example tasks:
  - The application now starts with an empty task list.
  - Tasks added via the form are saved in localStorage, so they persist after refreshing the page.
 
-## ![Preview](public/animation.gif)  
+## ![Preview](public/19.gif)  
 
 ## Technologies
 
