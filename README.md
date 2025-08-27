@@ -14,10 +14,13 @@ The todo-list application consists of two main elements:
    - two additional buttons:
       - the first button hides or shows completed tasks
       - the second button marks all tasks as completed
-
-these buttons follow these rules:
-    - if the task list is empty, the buttons are not displayed
-    - if all tasks are completed, the second button becomes disabled. 
+      - these buttons follow these rules:
+          - if the task list is empty, the buttons are not displayed
+          - if all tasks are completed, the second button becomes disabled
+          - note: since the app starts with an empty list, initially the buttons are hidden
+Important changes after removing example tasks:
+ - The application now starts with an empty task list.
+ - Tasks added via the form are saved in localStorage, so they persist after refreshing the page.
 
 ## ![Preview](public/animation.gif)  
 
