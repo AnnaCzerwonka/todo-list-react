@@ -18,18 +18,24 @@ The todo-list application consists of two main elements:
           - if the task list is empty, the buttons are not displayed
           - if all tasks are completed, the second button becomes disabled
           - note: since the app starts with an empty list, initially the buttons are hidden
-Important changes after removing example tasks:
+
+**Additional features:**
  - The application now starts with an empty task list.
- - Tasks added via the form are saved in localStorage, so they persist after refreshing the page.
+ - Tasks added via the form are saved in `localStorage`, so they persist after refreshing the page.
 
 ## ![Preview](public/19.gif)  
 
 ## Technologies
 
 - HTML
-- CSS
-- JavaScript
-- React: Create-react-app
+- CSS (Flexbox, Grid)
+- JavaScript (ES6+)
+- JSX (JavaScript XML)
+- React.js 
+- React Hooks (`useState`, `useEffect`)
+- Local Storage API
+- Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader, Style Loader)
+
 
 # Getting Started with Create React App
 
