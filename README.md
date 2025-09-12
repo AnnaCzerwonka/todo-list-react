@@ -20,8 +20,11 @@ The todo-list application consists of two main elements:
           - note: since the app starts with an empty list, initially the buttons are hidden
 
 **Additional features:**
- - The application now starts with an empty task list.
- - Tasks added via the form are saved in `localStorage`, so they persist after refreshing the page.
+- The application now starts with an empty task list.
+- Tasks added via the form are saved in `localStorage`, so they persist after refreshing the page.
+- Input automatically focuses after adding a task.
+- Task logic moved to custom hook `useTasks`.
+- Styles migrated to `styled-components` with `ThemeProvider`.
 
 ## ![Preview](public/19.gif)  
 
@@ -32,9 +35,10 @@ The todo-list application consists of two main elements:
 - JavaScript (ES6+)
 - JSX (JavaScript XML)
 - React.js 
-- React Hooks (`useState`, `useEffect`)
+- React Hooks (`useState`, `useEffect`, `useTasks`)
 - Local Storage API
 - Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader, Style Loader)
+- styled-components
 
 
 # Getting Started with Create React App
