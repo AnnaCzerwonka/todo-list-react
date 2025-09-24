@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  background: ${({ theme }) => theme.colors.transparent};
+  background: transparent;
   color: ${({ theme }) => theme.colors.teal};
   border: none;
   margin: 0 0 0 20px;
