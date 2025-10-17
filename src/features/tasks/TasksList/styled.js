@@ -15,13 +15,13 @@ export const Item = styled.li`
   border-bottom: 1px solid ${({ theme }) => theme.colors.borderGray};
   word-break: break-word;
 
-  ${({ hidden }) => hidden && css`
+  ${({ $hidden }) => $hidden && css`
     display: none;
   `}
 `;
 
 export const Content = styled.span`
-  ${({ done }) => done && css`
+  ${({ $done }) => $done && css`
     text-decoration: line-through;
   `}
 `;
@@ -34,7 +34,7 @@ export const Button = styled.button`
   padding: 0;
   transition: background 0.3s;
 
-  ${({ toggleDone, theme }) => toggleDone && css`
+  ${({ $toggleDone, theme }) => $toggleDone && css`
     background: ${theme.colors.green};
 
     &:hover {
@@ -46,7 +46,7 @@ export const Button = styled.button`
     }
   `}
 
-  ${({ remove, theme }) => remove && css`
+  ${({ $remove, theme }) => $remove && css`
     background: ${theme.colors.red};
 
     &:hover {
