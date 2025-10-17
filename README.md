@@ -23,8 +23,9 @@ The todo-list application consists of two main elements:
 - The application now starts with an empty task list.
 - Tasks added via the form are saved in `localStorage`, so they persist after refreshing the page.
 - Input automatically focuses after adding a task.
-- Task logic moved to custom hook `useTasks`.
+- Task management logic has been moved to Redux Toolkit.
 - Styles migrated to `styled-components` with `ThemeProvider`.
+
 
 ## ![Preview](public/19.gif)  
 
@@ -35,10 +36,12 @@ The todo-list application consists of two main elements:
 - JavaScript (ES6+)
 - JSX (JavaScript XML)
 - React.js 
-- React Hooks (`useState`, `useEffect`, `useTasks`)
+- React Hooks (`useState`, `useEffect`)
+- Redux Toolkit (`createSlice`, `useSelector`, `useDispatch`)
 - Local Storage API
 - Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader, Style Loader)
 - styled-components
+- ThemeProvider
 
 
 # Getting Started with Create React App
