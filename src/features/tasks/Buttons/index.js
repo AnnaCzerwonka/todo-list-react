@@ -3,7 +3,7 @@ import {
     selectAreTasksEmpty,
     selectHideDone,
     selectIsEveryTaskDone,
-} from "../selectors";
+} from "../tasksSlice";
 import { toggleHideDone, setAllDone } from "../tasksSlice";
 import { Wrapper, Button } from "./styled";
 
