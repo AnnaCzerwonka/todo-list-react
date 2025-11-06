@@ -1,26 +1,97 @@
-import Form from "./features/tasks/Form";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setTasks } from "./features/tasks/tasksSlice";
+import { getExampleTasks } from "./features/tasks/getExampleTasks";
 import TasksList from "./features/tasks/TasksList";
 import Buttons from "./features/tasks/Buttons";
+import Form from "./features/tasks/Form";
+import SearchAndFilter from "./features/tasks/SearchAndFilter";
+import TaskPage from "./features/tasks/TaskPage";
+import AuthorPage from "./features/author/AuthorPage";
 import Section from "./common/Section";
 import Header from "./common/Header";
 import { Container } from "./common/Container/styled";
+import Navigation from "./common/Navigation";
+import { toTasks, toTask, toAuthor } from "./routes";
+import styled from "styled-components";
+
+const ExampleTasksButton = styled.button`
+  background: none;
+  border: none;
+  color: teal;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s, opacity 0.2s;
+  align-self: center;
+
+  &:hover {
+    color: hsl(180, 100%, 35%);
+  }
+
+  &:active {
+    color: hsl(180, 100%, 25%);
+  }
+
+  &:disabled {
+    color: #aaa;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+`;
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
+
+  const onLoadExampleTasksClick = async () => {
+    setLoading(true);
+    try {
+      const exampleTasks = await getExampleTasks();
+      dispatch(setTasks(exampleTasks));
+    } catch (error) {
+      console.error("Błąd podczas pobierania zadań:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <Container>
-      <Header title="Lista zadań" />
-
-      <Section
-        title="Dodaj nowe zadanie"
-        body={<Form />}
-      />
-
-      <Section
-        title="Lista zadań"
-        body={<TasksList />}
-        extraHeaderContent={<Buttons />}
-      />
-    </Container>
+    <HashRouter>
+      <Navigation />
+      <Container>
+        <Routes>
+          <Route
+            path={toTasks()}
+            element={
+              <>
+                <Header title="Lista zadań" />
+                <Section
+                  title="Dodaj nowe zadanie"
+                  extraHeaderContent={
+                    <ExampleTasksButton
+                      onClick={onLoadExampleTasksClick}
+                      disabled={loading}
+                    >
+                      {loading ? "Ładowanie…" : "Pobierz przykładowe zadania"}
+                    </ExampleTasksButton>
+                  }
+                  body={<Form />}
+                />
+                <SearchAndFilter />
+                <Section
+                  title="Lista zadań"
+                  body={<TasksList />}
+                  extraHeaderContent={<Buttons />}
+                />
+              </>
+            }
+          />
+          <Route path={toTask()} element={<TaskPage />} />
+          <Route path={toAuthor()} element={<AuthorPage />} />
+        </Routes>
+      </Container>
+    </HashRouter>
   );
 }
 

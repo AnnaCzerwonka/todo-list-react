@@ -1,47 +1,41 @@
-# To-Do List 
+# To-Do List
 
-![ToDoList](./public/todolist.jpg)
+## ![Preview](public/14.gif)
 
-## Demo 
-https://annaczerwonka.github.io/todo-list-react/
+## 🔗 Live Demo  
 
-## General Info
-The todo-list application consists of two main elements:
-1. A form with a field for entering tasks and a "Add Task" button.
-2. A task list with the following options:
-   - marking a task as completed, which crosses out its text (green button)
-   - removing a task from the list (red button)
-   - two additional buttons:
-      - the first button hides or shows completed tasks
-      - the second button marks all tasks as completed
-      - these buttons follow these rules:
-          - if the task list is empty, the buttons are not displayed
-          - if all tasks are completed, the second button becomes disabled
-          - note: since the app starts with an empty list, initially the buttons are hidden
+[View Project](https://annaczerwonka.github.io/todo-list-react/)
 
-**Additional features:**
-- The application now starts with an empty task list.
-- Tasks added via the form are saved in `localStorage`, so they persist after refreshing the page.
-- Input automatically focuses after adding a task.
-- Task management logic has been moved to Redux Toolkit.
-- Styles migrated to `styled-components` with `ThemeProvider`.
+## 📝 Description  
 
+A modern task management app built with React, Redux Toolkit, and styled-components.
+The app allows users to add, complete, filter, and remove tasks, browse task details, and view author information on a separate page.
 
-## ![Preview](public/19.gif)  
+## ⚙️ Key Features  
 
-## Technologies
+- Add new tasks via an interactive form  
+- Mark tasks as done or remove them  
+- Filter and hide completed tasks  
+- Search tasks dynamically  
+- Load example tasks from an external source  
+- Save state automatically to localStorage
+- Built-in navigation and routing between pages (Tasks list / Task details / Author)  
+- Fully responsive design  
 
-- HTML
-- CSS (Flexbox, Grid)
-- JavaScript (ES6+)
-- JSX (JavaScript XML)
-- React.js 
-- React Hooks (`useState`, `useEffect`)
-- Redux Toolkit (`createSlice`, `useSelector`, `useDispatch`)
-- Local Storage API
-- Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader, Style Loader)
-- styled-components
-- ThemeProvider
+## 💻 Technologies Used
+
+- React.js – functional components & React Hooks (useState, useEffect)
+- React Router – multi-page navigation and routing
+- Redux Toolkit (createSlice, useSelector, useDispatch) – global state management styled-components – component-level CSS-in-JS styling
+- ThemeProvider – centralized theme and color management
+- localStorage API – saving and restoring data from browser storage
+- Fetch API / async–await – asynchronous data fetching (example tasks)
+- Create React App – project setup and build configuration (Webpack, Babel, ESLint)
+- JavaScript (ES6+), HTML5, CSS3 – core front-end technologies (Flexbox, Grid)
+
+## 📄 Summary  
+
+This project demonstrates the practical use of React, Redux Toolkit, and styled-components in building a modern, dynamic to-do list application with persistent state and responsive design.
 
 
 # Getting Started with Create React App

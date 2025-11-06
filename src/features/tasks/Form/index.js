@@ -17,19 +17,9 @@ const Form = () => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         const trimmedContent = newTaskContent.trim();
+        if (!trimmedContent) return;
 
-        if (!trimmedContent) {
-            setNewTaskContent("");
-            inputRef.current.focus();
-            return;
-        }
-
-        dispatch(addTask({
-            id: nextId++,
-            content: trimmedContent,
-            done: false
-        }));
-
+        dispatch(addTask({ id: nextId++, content: trimmedContent, done: false }));
         setNewTaskContent("");
         inputRef.current.focus();
     };
