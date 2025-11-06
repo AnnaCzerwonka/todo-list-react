@@ -19,7 +19,7 @@ const TasksList = () => {
     return (
         <List>
             {filteredTasks.map(task => (
-                <Item key={task.id} done={task.done}>
+                <Item key={task.id} $done={task.done}>
                     <Button $toggleDone onClick={() => dispatch(toggleTaskDone(task.id))}>
                         {task.done ? "✓" : ""}
                     </Button>

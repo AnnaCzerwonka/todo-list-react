@@ -44,6 +44,8 @@ const SearchAndFilter = () => {
             title="Wyszukiwarka"
             body={
                 <Input
+                    id="searchInput"
+                    name="search"
                     value={query}
                     onChange={({ target }) => updateQuery(target.value)}
                     placeholder="Filtruj zadania"

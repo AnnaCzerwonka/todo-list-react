@@ -27,6 +27,8 @@ const Form = () => {
     return (
         <StyledForm onSubmit={onFormSubmit}>
             <Input
+                id="taskInput"
+                name="task"
                 ref={inputRef}
                 value={newTaskContent}
                 placeholder="Co jest do zrobienia?"
