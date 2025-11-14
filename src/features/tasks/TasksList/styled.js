@@ -15,12 +15,6 @@ export const Item = styled.li`
   padding: 10px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.borderGray};
   word-break: break-word;
-
-  ${({ $hidden }) =>
-    $hidden &&
-    css`
-      display: none;
-    `}
 `;
 
 export const Content = styled.span`
@@ -33,21 +27,21 @@ export const Content = styled.span`
 
 export const Button = styled.button`
   border: none;
-  color: ${({ theme }) => theme.colors.white};
   width: 30px;
   height: 30px;
   padding: 0;
+  font-size: 18px;
+  color: ${({ theme }) => theme.colors.white};
   transition: background 0.3s;
+  cursor: pointer;
 
   ${({ $toggleDone, theme }) =>
     $toggleDone &&
     css`
       background: ${theme.colors.green};
-
       &:hover {
         background: ${theme.colors.greenHover};
       }
-
       &:active {
         background: ${theme.colors.greenActive};
       }
@@ -57,11 +51,9 @@ export const Button = styled.button`
     $remove &&
     css`
       background: ${theme.colors.red};
-
       &:hover {
         background: ${theme.colors.redHover};
       }
-
       &:active {
         background: ${theme.colors.redActive};
       }

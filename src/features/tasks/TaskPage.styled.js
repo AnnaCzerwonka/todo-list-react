@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
   margin: 40px auto;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  background-color: ${({ theme }) => theme.colors.gray100};
+  padding: 20px;
 `;
 
 export const Title = styled.h1`
@@ -15,23 +16,23 @@ export const Title = styled.h1`
   margin: 0 0 20px 0;
 `;
 
-export const SectionBox = styled.section`
+export const TaskBlock = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  padding: 25px 30px;
-  border-top: 1px solid #ccc;
+  padding: 20px 25px;
+  box-shadow: 0 0 5px ${({ theme }) => theme.colors.borderGray};
+  border-radius: 4px;
+  margin: 0;
 `;
 
-export const Name = styled.h2`
-  font-size: 24px;
+export const TaskTitle = styled.h2`
+  font-size: 20px;
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.black};
   margin: 0;
+  color: ${({ theme }) => theme.colors.black};
 `;
 
-export const Content = styled.p`
+export const TaskStatus = styled.p`
   font-size: 18px;
-  line-height: 1.6;
-  color: #333;
-  text-align: justify;
   margin: 0;
+  color: ${({ theme }) => theme.colors.gray700};
 `;

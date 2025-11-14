@@ -8,15 +8,15 @@ export const theme = {
         borderGray: "#dddddd",
         white: "#ffffff",
         black: "#000000",
-        green: "#2c8a2c",
+        green: "#258225ff",
         greenHover: "#3aad3a",
         greenActive: "#4cc54c",
         red: "#d93939",
-        redHover: "#0b0101ff",
+        redHover: "#c53030",
         redActive: "#ec6f6f",
-        background: "#eeeeee",
+        background: "#eeeeee"
     },
     breakpoints: {
-        mobileMax: "767px",
-    },
+        mobileMax: "767px"
+    }
 };

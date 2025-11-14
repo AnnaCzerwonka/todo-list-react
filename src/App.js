@@ -14,31 +14,7 @@ import Header from "./common/Header";
 import { Container } from "./common/Container/styled";
 import Navigation from "./common/Navigation";
 import { toTasks, toTask, toAuthor } from "./routes";
-import styled from "styled-components";
-
-const ExampleTasksButton = styled.button`
-  background: none;
-  border: none;
-  color: teal;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.2s, opacity 0.2s;
-  align-self: center;
-
-  &:hover {
-    color: hsl(180, 100%, 35%);
-  }
-
-  &:active {
-    color: hsl(180, 100%, 25%);
-  }
-
-  &:disabled {
-    color: #aaa;
-    cursor: not-allowed;
-    opacity: 0.6;
-  }
-`;
+import ExampleTasksButton from "./common/ExampleTasksButton";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -47,6 +23,7 @@ function App() {
   const onLoadExampleTasksClick = async () => {
     setLoading(true);
     try {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       const exampleTasks = await getExampleTasks();
       dispatch(setTasks(exampleTasks));
     } catch (error) {
